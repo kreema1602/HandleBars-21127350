@@ -1,0 +1,25 @@
+<!--contain-->
+<div class="container">
+    <h1 class="text-center">Inspiring Quotes</h1>
+    <div class="row destacados">
+        {{#each emotions}}
+        <div class="col-md-3">
+            <a href="#">
+                <img src="images{{imagePath}}" alt="{{title}}" class="img-circle img-thumbnail" onclick="chageQuote('images{{quotePath}}')">
+                <h2>{{title}}</h2>
+            </a>
+        </div>
+        {{/each}}
+    </div>
+    <div class="row text-center">
+        <img class="img-thumbnail" id="quote" src="images/task1/default.jpg" />
+    </div>
+
+    {{!-- {{/each}} --}}
+</div>
+<!--/contain-->
+<script>
+    function chageQuote(quotePath){
+        document.querySelector('#quote').src = quotePath;
+    }
+</script>
